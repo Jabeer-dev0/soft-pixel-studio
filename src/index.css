@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { font-family: 'Manrope', sans-serif; color: #f5f6fa; background: #090b10; font-synthesis: none; text-rendering: optimizeLegibility; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; background: #090b10; }
+a { color: inherit; text-decoration: none; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+::selection { background: rgba(71, 123, 255, .45); color: #fff; }
+
+.display-font { font-family: 'Playfair Display', serif; }
+.mono { font-family: 'DM Mono', monospace; }
+.eyebrow { color: #8c96aa; font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; }
+.container-shell { width: min(1240px, calc(100% - 64px)); margin-inline: auto; }
+.section-space { padding: 128px 0; }
+.grid-lines { background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px); background-size: 80px 80px; }
+
+.fade-in { animation: fade-in .7s cubic-bezier(.2,.7,.2,1) both; }
+@keyframes fade-in { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
+@media (max-width: 800px) {
+  .container-shell { width: min(100% - 40px, 1240px); }
+  .section-space { padding: 84px 0; }
+}
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; } }
